@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Рекламный калькулятор</title>
+    <link type="text/css" rel="stylesheet" href="./style.css">
+</head>
+
+<body class="page-template page-template-calc page-template-calc-php page page-id-2343  stickyheader anps-shadows" cz-shortcut-listen="true">
+    <div class="site">
+        <div class="top-bar clearfix classic">
+            <main class="site-main" style="padding-top: 0px;">
+                <div class="page-header page-header-sm">
+                    <h1 class="text-uppercase page-title">Рекламный калькулятор</h1>
+                </div>
+                <div class="container content-container">
+                    <div class="row">
+                        <div id="calc_container">
+                            <div id="app" class="calc">
+                                <div class="calc__items__container">
+                                    <div class="calc__items row">
+                                        <div class="calc__item col-sm-3 calc__item-active" data-tab="tab1" data-tip1="Буквы" data-ct="0">
+                                            <div class="calc__item__name">Буквы</div>
+                                        </div>
+                                        <div class="calc__item col-sm-3" data-tab="tab3" data-tip1="Короба" data-ct="1">
+                                            <div class="calc__item__name">Короба</div>
+                                        </div>
+                                        <div class="calc__item col-sm-3" data-tab="tab4" data-tip1="Панели" data-ct="2">
+                                            <div class="calc__item__name">Световые панели</div>
+                                        </div>
+                                        <div class="calc__item col-sm-3" data-tab="tab5" data-tip1="Панель-кронштейн" data-ct="3">
+                                            <div class="calc__item__name">Панель-кронштейн</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__container row calc__container_active" id="tab1">
+                                    <div class="col-sm-12">
+                                        <div class="calc__picture-container col-sm-6"> <img src="./лого.jpg" class="calc__picture-mobile">
+                                            <table class="selted_pars" id="selted_pars0"></table>
+                                            <div class="calc__form__bottom">
+                                                <div class="row">
+                                                    <div class="calc__form__bottom__left pull-left">
+                                                        <div class="exclamation">Для точного рассчета,<br> оставьте заявку!</div>
+                                                    </div>
+                                                    <div class="calc__form__bottom__right pull-right">
+                                                        <div class="calc__count hide">
+                                                            <div class="calc__count__button calc__count__button-left">-</div> <input type="number" class="calc__count__input" value="1">
+                                                            <div class="calc__count__button calc__count__button-right">+</div>
+                                                        </div>
+                                                        <div class="fb calc__price" id="tot_pr1">
+                                                            <div class="cpric">Итого</div><span>0</span> <i class="fa fa-rub" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calc__form col-sm-6"> <label>Введите текст <span>например, магазин</span></label>
+                                            <div class="calc__form__row"> <label class="hide">Текст</label>
+                                                <div class="calc__form__item calc__form__item-text"> <input min="1" type="text" class="calc__form__item__input calc__form__item__input-text lett_text" id="lett_txt_1" value="Магазин">
+                                                    <!---->
+                                                    <!---->
+                                                </div>
+                                                <div class="calc__form__item calc__form__item-height hide"> <label class="fb calc__form__item__name">Высота букв <span>см</span></label> <input min="1" type="number" class="calc__form__item__input calc__form__item__input-number lett_height" id="lett_hght_1" data-nextsel="cal_row_1_2"
+                                                        value="21">
+                                                    <!---->
+                                                    <!---->
+                                                </div>
+                                            </div> <label>Параметры</label>
+                                            <div class="calc__form__row"> <label class="hide">Подсветка</label>
+                                                <div class="letts_select">
+                                                    <div class="lett_item selt" data-st="subtab1" data-parord="1" data-fjs="Несветовые буквы"> <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17 6.12933C12.0726 6.12933 8.51327 9.8016 7.94882 13.7461C7.59687 16.3758 8.44687 18.9391 10.2133 20.8782C11.7672 22.5383 12.6172 24.7563 12.6172 27.0407L12.6105 30.6399C12.6105 32.0942 13.8125 33.2696 15.3 33.2696H18.7664C20.2539 33.2696 21.4559 32.0942 21.4559 30.6399L21.4625 27.0407C21.4625 24.6899 22.2394 22.5383 23.7269 21.0176C25.3539 19.3575 26.2039 17.2125 26.2039 14.9946C26.1973 10.0739 22.0203 6.12933 17 6.12933ZM20.1078 30.6399C20.1078 31.3305 19.5434 31.8883 18.8328 31.8883H15.3664C14.6559 31.8883 14.0914 31.3371 14.0914 30.6399V29.0461H20.1012V30.6399H20.1078ZM22.7375 20.0481C20.9711 21.8477 20.048 24.3379 20.048 27.0407V27.6649H14.0383V27.0407C14.0383 24.4774 12.9758 21.9207 11.2094 19.9817C9.65546 18.3215 9.01796 16.1766 9.29687 13.9586C9.79491 10.6383 12.8828 7.51722 17.0066 7.51722C21.323 7.51722 24.7894 10.9106 24.7894 14.9946C24.7894 16.8606 24.0789 18.6602 22.7375 20.0481Z"
+                                                                  fill="#000"></path>
+                                                        </svg> Несветовые</div>
+                                                    <div class="lett_item li_sec" data-st="subtab2" data-parord="1" data-fjs="Световые буквы"> <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17 6.12933C12.0726 6.12933 8.51327 9.8016 7.94882 13.7461C7.59687 16.3758 8.44687 18.9391 10.2133 20.8782C11.7672 22.5383 12.6172 24.7563 12.6172 27.0407L12.6105 30.6399C12.6105 32.0942 13.8125 33.2696 15.3 33.2696H18.7664C20.2539 33.2696 21.4559 32.0942 21.4559 30.6399L21.4625 27.0407C21.4625 24.6899 22.2394 22.5383 23.7269 21.0176C25.3539 19.3575 26.2039 17.2125 26.2039 14.9946C26.1973 10.0739 22.0203 6.12933 17 6.12933ZM20.1078 30.6399C20.1078 31.3305 19.5434 31.8883 18.8328 31.8883H15.3664C14.6559 31.8883 14.0914 31.3371 14.0914 30.6399V29.0461H20.1012V30.6399H20.1078ZM22.7375 20.0481C20.9711 21.8477 20.048 24.3379 20.048 27.0407V27.6649H14.0383V27.0407C14.0383 24.4774 12.9758 21.9207 11.2094 19.9817C9.65546 18.3215 9.01796 16.1766 9.29687 13.9586C9.79491 10.6383 12.8828 7.51722 17.0066 7.51722C21.323 7.51722 24.7894 10.9106 24.7894 14.9946C24.7894 16.8606 24.0789 18.6602 22.7375 20.0481Z"
+                                                                  fill="#000"></path>
+                                                            <path d="M17.7039 0.730469H16.2894V4.05078H17.7039V0.730469Z" fill="#000"></path>
+                                                            <path d="M25.5731 7.13207L26.5626 8.12152L28.9864 5.79066L27.9903 4.80121L25.5731 7.13207Z" fill="#000"></path>
+                                                            <path d="M33.2695 15.6851H29.8031V17.073H33.2695V15.6851Z" fill="#000"></path>
+                                                            <path d="M4.19688 15.6851H0.730469V17.073H4.19688V15.6851Z" fill="#000"></path>
+                                                            <path d="M5.98328 4.79449L4.98718 5.78395L7.41101 8.11481L8.40046 7.12535L5.98328 4.79449Z" fill="#000"></path>
+                                                        </svg> Световые</div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <label class="fb calc__form__item__name before_range">Высота букв <span>см</span></label>
+                                            <input id="demo_0" type="hidden" name="" value="21" class="irs-hidden-input" tabindex="-1" readonly="">
+                                            <div id="subtab1" class="subtab">
+                                                <div class="calc__form__row wad" id="cal_ri_1_2_1" data-nextid="cal_row_1_4"> <label class="hide">Тип букв</label>
+                                                    <div class="row">
+                                                        <div class="select_calc sc_check col-sm-6 row selt" data-parord="2" data-nexts="cal_ri_1_4_1" data-fjs="Объемные">
+                                                            <div class="pull-left"><img src="./ob-lett.png"></div>
+                                                            <div class="pull-left">Объемные<br> буквы</div>
+                                                        </div>
+                                                        <div class="select_calc sc_check col-sm-6 row" data-parord="2" data-nexts="cal_ri_1_4_2" data-fjs="Плоские">
+                                                            <div class="pull-left"><img src="./pl-lett.png"></div>
+                                                            <div class="pull-left">Плоские<br> буквы</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc__form__row" id="cal_row_1_3"> <label class="hide">Тип шрифта</label>
+                                                    <div class="row">
+                                                        <div class="select_calc sc_radio col-sm-6 row no-nxt selt" data-addpr="0">
+                                                            <div class="pull-left"><img src="./pr-shr.png"></div>
+                                                            <div class="pull-left">Простой<br> шрифт</div>
+                                                        </div>
+                                                        <div class="select_calc sc_radio col-sm-6 row no-nxt" data-addpr="10">
+                                                            <div class="pull-left"><img src="./sl-shr.png"></div>
+                                                            <div class="pull-left">Сложный<br> шрифт</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc__form__row" id="cal_row_1_4">
+                                                    <div class="calc__form__item calc__form__item-light"> <label>Материал</label>
+                                                        <div class="calc__form__item__select">Акрил</div>
+                                                        <div class="calc__form__item__icon calc__form__item__icon-right"><i class="fa fa-chevron-down"></i></div>
+                                                        <div class="calc__form__item__select-items curr" id="cal_ri_1_4_1">
+                                                            <div class="calc__form__item__select-item calc_pr selt" data-h1="1" data-h2="1" data-h3="0" data-fjs="акрил">Акрил</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-h1="1" data-h2="1" data-h3="0" data-fjs="металл">Металл</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-h1="1" data-h2="1" data-h3="0" data-fjs="Пластик">Пластик ПВХ</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-h1="1" data-h2="1" data-h3="1" data-fjs="АЛС">АЛС профиль</div>
+                                                            <div class="calc__form__item__select-item calc_pr hide" data-h1="0" data-h2="0" data-h3="1" data-fjs="цельноклеяные">Цельноклеяные</div>
+                                                            <div class="calc__form__item__select-item calc_pr hide" data-h1="0" data-h2="0" data-h3="1" data-fjs="композитные">Композитные</div>
+                                                            <div class="calc__form__item__select-item calc_pr hide" data-h1="0" data-h2="0" data-h3="1" data-fjs="рамные баннерные">Рамные баннерные</div>
+                                                            <div class="calc__form__item__select-item calc_pr hide" data-h1="0" data-h2="0" data-h3="1" data-fjs="рамные акриловые">Рамные акриловые</div>
+                                                        </div>
+                                                        <div class="calc__form__item__select-items" id="cal_ri_1_4_2">
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_1_3_1" data-fjs="ПВХ 3-5 мм">ПВХ 3-5 мм</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_1_3_1" data-fjs="ПВХ 6-10 мм">ПВХ 6-10 мм</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_1_3_1" data-fjs="ПВХ 20 мм">ПВХ 20 мм</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_1_3_1" data-fjs="акрил 3-5 мм">Акрил 3-5 мм</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_1_3_1" data-fjs="акрил 6-10 мм">Акрил 6-10 мм</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_1_3_1" data-fjs="композит 3-4 мм">Композит 3-4 мм</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="subtab2" class="subtab not_act">
+                                                <div class="calc__form__row" id="cal_row_2_4">
+                                                    <div class="calc__form__item calc__form__item-light"> <label>Материал</label>
+                                                        <div class="calc__form__item__select">Полистерол фронтальное свечение</div>
+                                                        <div class="calc__form__item__icon calc__form__item__icon-right"><i class="fa fa-chevron-down"></i></div>
+                                                        <div class="calc__form__item__select-items curr" id="cal_ri_2_4_1">
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_2_3_1" data-fjs="контражурное свечение">Контражурное свечение</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_2_3_1" data-fjs="комбинированная подсветка">Комбинированная подсветка</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_2_3_1" data-fjs="металл контражур">Металл контражур</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_2_3_1" data-fjs="пиксельное свечение">Пиксельное свечение</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_2_3_1" data-fjs="динамическое свечение">Динамическое свечение</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-nexts="cal_ri_2_3_1" data-fjs="акрил фронтальное свечение">Акрил фронтальное свечение</div>
+                                                            <div class="calc__form__item__select-item calc_pr selt" data-nexts="cal_ri_2_3_1" data-fjs="полистерол фронтальное свечение">Полистерол фронтальное свечение</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc__form__row" id="cal_row_2_3"> <label class="hide">Тип шрифта</label>
+                                                    <div class="row">
+                                                        <div class="select_calc sc_radio col-sm-6 row no-nxt selt" data-addpr="0">
+                                                            <div class="pull-left"><img src="./pr-shr.png"></div>
+                                                            <div class="pull-left">Простой<br> шрифт</div>
+                                                        </div>
+                                                        <div class="select_calc sc_radio col-sm-6 row no-nxt" data-addpr="10">
+                                                            <div class="pull-left"><img src="./sl-shr.png"></div>
+                                                            <div class="pull-left">Сложный<br> шрифт</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><label>Подложка из композита</label>
+                                            <div class="calc__form__row"> <label class="hide">Подложка из композита</label>
+                                                <div class="letts_select">
+                                                    <div class="podl_sel psact" data-st="subtb1" data-fjs="Несветовые буквы"> Не нужна подложка</div>
+                                                    <div class="podl_sel li_sec" data-st="subtb2" data-fjs="Световые буквы"> Нужна подложка</div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                            <div class="podltab not_act">
+                                                <div class="calc__form__row">
+                                                    <div class="calc__form__item calc__form__item-height"> <label class="fb calc__form__item__name before_range">Ширина <span>мм</span></label>
+                                                        <input min="1" type="hidden" class="calc__form__item__input calc__form__item__input-text irs-hidden-input" id="podl_width" value="1000" tabindex="-1" readonly="">
+                                                        <!---->
+                                                        <!---->
+                                                    </div>
+                                                    <div class="calc__form__item calc__form__item-height"> <label class="fb calc__form__item__name before_range">Высота <span>мм</span></label>
+                                                        <input min="1" type="hidden" class="calc__form__item__input calc__form__item__input-number irs-hidden-input" id="podl_height" value="1000" tabindex="-1" readonly="">
+                                                        <!---->
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                                <div class="form_hint"> Стоимость подложки рассчитывается исходя из м<sup>2</sup> площади и округляется в большую сторону.<br> Площадь выбранная Вами: <strong><span id="kdp">1</span> м<sup>2</sup></strong>, округляется до <strong><span
+                                                              id="kdop">1</span>
+                                                        м<sup>2</sup></strong></div>
+                                            </div>
+                                            <div class="par_on_mob"></div><label>Введите ваши данные</label>
+                                            <div class="calc_form calc_cont_form">
+                                                <div role="form" class="wpcf7" id="wpcf7-f2490-o1" lang="ru-RU" dir="ltr">
+                                                    <div class="screen-reader-response"></div>
+                                                    <form action="https://mrrk.ru/calc/#wpcf7-f2490-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                        <div style="display: none;"> <input type="hidden" name="_wpcf7" value="2490"> <input type="hidden" name="_wpcf7_version" value="5.1.1"> <input type="hidden" name="_wpcf7_locale" value="ru_RU"> <input type="hidden" name="_wpcf7_unit_tag"
+                                                                value="wpcf7-f2490-o1">
+                                                            <input type="hidden" name="_wpcf7_container_post" value="0"> <input type="hidden" name="g-recaptcha-response" value="03AGdBq24DfiJrDXiXFbqw6Pgb_FGyNL2AnI8hbfYzv1PuVKbXxTIVAbgtIMEMNTBg04p8E6a1NV2AfJOD502ZxXHGjAQac_cZZm1J0tjN-GU9F5lhitHLycaToBhsbst4OIGBt4jsYR5M65uj7iW7nfuFY57oIsf4fK4SxdlLxl6CdfNB3oUFrDHZ9JzTYi-X78bn2FoJfIqj5dwCrCaBTt7kE_xRrDeqvUuBX7OtR6niO5ZpCaU3YiAtir1r9Z8V_y5rwNi8Ct2fRDXiklJMAf23W-HmUHbntXJZBViZXrw35jsYAfQkxreIrO0MG3HR_T2j1pvkf6mKBBy5-ZnkBhIkUjvwCZBljLqc6_hujShw5g9MboFGHNGyx67G5JNcoiRUSiYuFNDzRGjiTOjlgqtDxj2woWVHQi9h-T4gdSRoLUCXgzmpN1U">
+                                                        </div>
+                                                        <p><label><span class="wpcf7-form-control-wrap user-email"><input type="email" name="user-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true"
+                                                                           aria-invalid="false" placeholder="Введите E-mail"></span> </label></p>
+                                                        <p><label><span class="wpcf7-form-control-wrap user-phone"><input type="tel" name="user-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true"
+                                                                           aria-invalid="false" placeholder="Номер телефона*"></span></label></p>
+                                                        <p><label><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Ваш комментарий"></textarea></span> </label></p>
+                                                        <p><span class="wpcf7-form-control-wrap textarea-872"><textarea name="textarea-872" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea hide" id="zayavka" aria-invalid="false"></textarea></span></p>
+                                                        <div hidden=""> <span class="wpcf7-form-control-wrap utm_source"><input type="text" name="utm_source" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br>
+                                                            <span class="wpcf7-form-control-wrap utm_medium"><input type="text" name="utm_medium" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_campaign"><input
+                                                                       type="text" name="utm_campaign" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_content"><input type="text" name="utm_content" value="" size="40"
+                                                                       class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br>
+                                                            <span class="wpcf7-form-control-wrap utm_term"><input type="text" name="utm_term" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span>
+                                                        </div>
+                                                        <p><input type="submit" value="Оставить заявку" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+                                                        <div class="clearfix"></div>
+                                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__container" id="tab3">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="calc__picture-container col-sm-6"> <img src="./korob.jpg" class="calc__picture-mobile">
+                                                <table class="selted_pars" id="selted_pars1"></table>
+                                                <div class="calc__form__bottom">
+                                                    <div class="row">
+                                                        <div class="calc__form__bottom__left pull-left">
+                                                            <div class="exclamation">Для точного рассчета,<br> оставьте заявку!</div>
+                                                        </div>
+                                                        <div class="calc__form__bottom__right pull-right">
+                                                            <div class="calc__count hide">
+                                                                <div class="calc__count__button calc__count__button-left">-</div> <input type="number" class="calc__count__input" value="1">
+                                                                <div class="calc__count__button calc__count__button-right">+</div>
+                                                            </div>
+                                                            <div class="fb calc__price" id="tot_pr2">
+                                                                <div class="cpric">Итого</div><span>0</span> <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="calc__form col-sm-6">
+                                                <div class="calc__form__row">
+                                                    <div class="calc__form__item calc__form__item-height">
+                                                        <label class="fb calc__form__item__name before_range">Ширина
+                                                            <span>мм</span></label>
+                                                        <input min="1" type="hidden" class="calc__form__item__input calc__form__item__input-text kor_dimension irs-hidden-input" id="rekl_width" value="1000" tabindex="-1" readonly="">
+                                                        <!---->
+                                                        <!---->
+                                                    </div>
+                                                    <div class="calc__form__item calc__form__item-height"> <label class="fb calc__form__item__name before_range">Высота <span>мм</span></label>
+                                                        <input min="1" type="hidden" class="calc__form__item__input calc__form__item__input-number kor_dimension irs-hidden-input" id="rekl_height" value="1000" tabindex="-1" readonly="">
+                                                        <!---->
+                                                        <!---->
+                                                    </div>
+                                                </div>
+                                                <div class="form_hint"> Стоимость рассчитывается исходя из м<sup>2</sup> площади и округляется в большую сторону.<br> Площадь выбранная Вами: <strong><span id="kd">1</span> м<sup>2</sup></strong>, округляется до <strong><span id="kdo">1</span>
+                                                        м<sup>2</sup></strong>
+                                                </div>
+                                                <div class="letts_select calc__form__row" id="cal_row_3_1" data-nextid="cal_row_3_3"> <label class="hide">Тип короба</label>
+                                                    <div class="lett_item selt" data-nexts="cal_ri_3_3_1" data-fjs="Несветовой"> <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17 6.12933C12.0726 6.12933 8.51327 9.8016 7.94882 13.7461C7.59687 16.3758 8.44687 18.9391 10.2133 20.8782C11.7672 22.5383 12.6172 24.7563 12.6172 27.0407L12.6105 30.6399C12.6105 32.0942 13.8125 33.2696 15.3 33.2696H18.7664C20.2539 33.2696 21.4559 32.0942 21.4559 30.6399L21.4625 27.0407C21.4625 24.6899 22.2394 22.5383 23.7269 21.0176C25.3539 19.3575 26.2039 17.2125 26.2039 14.9946C26.1973 10.0739 22.0203 6.12933 17 6.12933ZM20.1078 30.6399C20.1078 31.3305 19.5434 31.8883 18.8328 31.8883H15.3664C14.6559 31.8883 14.0914 31.3371 14.0914 30.6399V29.0461H20.1012V30.6399H20.1078ZM22.7375 20.0481C20.9711 21.8477 20.048 24.3379 20.048 27.0407V27.6649H14.0383V27.0407C14.0383 24.4774 12.9758 21.9207 11.2094 19.9817C9.65546 18.3215 9.01796 16.1766 9.29687 13.9586C9.79491 10.6383 12.8828 7.51722 17.0066 7.51722C21.323 7.51722 24.7894 10.9106 24.7894 14.9946C24.7894 16.8606 24.0789 18.6602 22.7375 20.0481Z"
+                                                                  fill="#000"></path>
+                                                        </svg> Несветовые</div>
+                                                    <div class="lett_item li_sec" data-nexts="cal_ri_3_3_2" data-fjs="Световой"> <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17 6.12933C12.0726 6.12933 8.51327 9.8016 7.94882 13.7461C7.59687 16.3758 8.44687 18.9391 10.2133 20.8782C11.7672 22.5383 12.6172 24.7563 12.6172 27.0407L12.6105 30.6399C12.6105 32.0942 13.8125 33.2696 15.3 33.2696H18.7664C20.2539 33.2696 21.4559 32.0942 21.4559 30.6399L21.4625 27.0407C21.4625 24.6899 22.2394 22.5383 23.7269 21.0176C25.3539 19.3575 26.2039 17.2125 26.2039 14.9946C26.1973 10.0739 22.0203 6.12933 17 6.12933ZM20.1078 30.6399C20.1078 31.3305 19.5434 31.8883 18.8328 31.8883H15.3664C14.6559 31.8883 14.0914 31.3371 14.0914 30.6399V29.0461H20.1012V30.6399H20.1078ZM22.7375 20.0481C20.9711 21.8477 20.048 24.3379 20.048 27.0407V27.6649H14.0383V27.0407C14.0383 24.4774 12.9758 21.9207 11.2094 19.9817C9.65546 18.3215 9.01796 16.1766 9.29687 13.9586C9.79491 10.6383 12.8828 7.51722 17.0066 7.51722C21.323 7.51722 24.7894 10.9106 24.7894 14.9946C24.7894 16.8606 24.0789 18.6602 22.7375 20.0481Z"
+                                                                  fill="#000"></path>
+                                                            <path d="M17.7039 0.730469H16.2894V4.05078H17.7039V0.730469Z" fill="#000"></path>
+                                                            <path d="M25.5731 7.13207L26.5626 8.12152L28.9864 5.79066L27.9903 4.80121L25.5731 7.13207Z" fill="#000"></path>
+                                                            <path d="M33.2695 15.6851H29.8031V17.073H33.2695V15.6851Z" fill="#000"></path>
+                                                            <path d="M4.19688 15.6851H0.730469V17.073H4.19688V15.6851Z" fill="#000"></path>
+                                                            <path d="M5.98328 4.79449L4.98718 5.78395L7.41101 8.11481L8.40046 7.12535L5.98328 4.79449Z" fill="#000"></path>
+                                                        </svg> Световые</div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="calc__form__row" id="cal_row_3_2" data-nextid="cal_row_3_3"> <label class="hide">Форма короба</label>
+                                                    <div class="row">
+                                                        <div class="select_calc sc_check col-sm-6 row no-nxt calc_pr selt" data-fjs="Простой формы">
+                                                            <div class="pull-left"><img src="./pr-form.png"></div>
+                                                            <div class="pull-left">Простой<br> формы</div>
+                                                        </div>
+                                                        <div class="select_calc sc_check col-sm-6 row no-nxt calc_pr" data-fjs="Сложной формы">
+                                                            <div class="pull-left"><img src="./sl-form.png"></div>
+                                                            <div class="pull-left">Сложной<br> формы</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="calc__form__row" id="cal_row_3_3">
+                                                    <div class="calc__form__item calc__form__item-light"> <label class="fb calc__form__item__name">Материал</label>
+                                                        <div class="calc__form__item__select">Подложка композит</div>
+                                                        <div class="calc__form__item__icon calc__form__item__icon-right"><i class="fa fa-chevron-down"></i></div>
+                                                        <div class="calc__form__item__select-items curr" id="cal_ri_3_3_1">
+                                                            <div class="calc__form__item__select-item calc_pr selt" data-fjs="подложка композит">Подложка композит</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="цельноклеяный">Цельноклееный</div>
+                                                        </div>
+                                                        <div class="calc__form__item__select-items" id="cal_ri_3_3_2">
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="цельноклеяный акрил">Цельноклеяный акрил</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="композитный псевдоинкрустация">Композитный псевдоинкрустация</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="композитный инкрустация">Композитный инкрустация</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="баннерный рама">Баннерный рама</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="акрил рама">Акрил рама</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="сотовый рама">Сотовый рама</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="par_on_mob"></div><label>Введите ваши данные</label>
+                                                <div class="calc_form calc_cont_form">
+                                                    <div role="form" class="wpcf7" id="wpcf7-f2491-o2" lang="ru-RU" dir="ltr">
+                                                        <div class="screen-reader-response"></div>
+                                                        <form action="https://mrrk.ru/calc/#wpcf7-f2491-o2" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                            <div style="display: none;"> <input type="hidden" name="_wpcf7" value="2491"> <input type="hidden" name="_wpcf7_version" value="5.1.1"> <input type="hidden" name="_wpcf7_locale" value="ru_RU"> <input type="hidden" name="_wpcf7_unit_tag"
+                                                                    value="wpcf7-f2491-o2"> <input type="hidden" name="_wpcf7_container_post" value="0"> <input type="hidden" name="g-recaptcha-response" value="03AGdBq24DfiJrDXiXFbqw6Pgb_FGyNL2AnI8hbfYzv1PuVKbXxTIVAbgtIMEMNTBg04p8E6a1NV2AfJOD502ZxXHGjAQac_cZZm1J0tjN-GU9F5lhitHLycaToBhsbst4OIGBt4jsYR5M65uj7iW7nfuFY57oIsf4fK4SxdlLxl6CdfNB3oUFrDHZ9JzTYi-X78bn2FoJfIqj5dwCrCaBTt7kE_xRrDeqvUuBX7OtR6niO5ZpCaU3YiAtir1r9Z8V_y5rwNi8Ct2fRDXiklJMAf23W-HmUHbntXJZBViZXrw35jsYAfQkxreIrO0MG3HR_T2j1pvkf6mKBBy5-ZnkBhIkUjvwCZBljLqc6_hujShw5g9MboFGHNGyx67G5JNcoiRUSiYuFNDzRGjiTOjlgqtDxj2woWVHQi9h-T4gdSRoLUCXgzmpN1U">
+                                                            </div>
+                                                            <p><label><span class="wpcf7-form-control-wrap user-email"><input type="email" name="user-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true"
+                                                                               aria-invalid="false" placeholder="Введите E-mail"></span> </label></p>
+                                                            <p><label><span class="wpcf7-form-control-wrap user-phone"><input type="tel" name="user-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true"
+                                                                               aria-invalid="false" placeholder="Номер телефона*"></span></label></p>
+                                                            <p><label><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Ваш комментарий"></textarea></span> </label><br>
+                                                                <span class="wpcf7-form-control-wrap textarea-872"><textarea name="textarea-872" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea hide" id="zayavka" aria-invalid="false"></textarea></span>
+                                                            </p>
+                                                            <div hidden=""> <span class="wpcf7-form-control-wrap utm_source"><input type="text" name="utm_source" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_medium"><input type="text" name="utm_medium" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br>                                                                <span class="wpcf7-form-control-wrap utm_campaign"><input
+                                                                           type="text" name="utm_campaign" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_content"><input type="text" name="utm_content" value=""
+                                                                           size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_term"><input type="text" name="utm_term" value="" size="40" class="wpcf7-form-control wpcf7-text"
+                                                                           aria-invalid="false"></span></div>
+                                                            <p><input type="submit" value="Оставить заявку" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__container" id="tab4">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="calc__picture-container col-sm-6"> <img src="./pan.jpg" class="calc__picture-mobile">
+                                                <table class="selted_pars" id="selted_pars2"></table>
+                                                <div class="calc__form__bottom">
+                                                    <div class="row">
+                                                        <div class="calc__form__bottom__left pull-left">
+                                                            <div class="exclamation">Для точного рассчета,<br> оставьте заявку!</div>
+                                                        </div>
+                                                        <div class="calc__form__bottom__right pull-right">
+                                                            <div class="calc__count hide">
+                                                                <div class="calc__count__button calc__count__button-left">-</div> <input type="number" class="calc__count__input" value="1">
+                                                                <div class="calc__count__button calc__count__button-right">+</div>
+                                                            </div>
+                                                            <div class="fb calc__price" id="tot_pr3">
+                                                                <div class="cpric">Итого</div><span>0</span> <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="calc__form col-sm-6">
+                                                <div class="letts_select calc__form__row" id="cal_row_4_1" data-nextid="cal_row_4_2"> <label class="hide">Параметры</label>
+                                                    <div class="lett_item odn-dvust no-nxt calc_pr selt" data-nexts="cal_ri_4_2_1" data-fjs="Односторонние"> <svg width="2" height="30" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 0V30" stroke="#D3DAE9" stroke-width="2"></path>
+                                                        </svg> Односторонние</div>
+                                                    <div class="lett_item odn-dvust no-nxt calc_pr li_sec" data-nexts="cal_ri_4_2_1" data-fjs="Двусторонние"> <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 0V30" stroke="#D3DAE9" stroke-width="2"></path>
+                                                            <path d="M11 7L11 23" stroke="#D3DAE9" stroke-width="2"></path>
+                                                        </svg> Двусторонние</div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="calc__form__row hide" id="cal_row_4_2" data-nextid="cal_row_4_3">
+                                                    <div class="calc__form__item calc__form__item-light"> <label class="fb calc__form__item__name">Формат панели</label>
+                                                        <div class="calc__form__item__select">A4</div>
+                                                        <div class="calc__form__item__icon calc__form__item__icon-right"><i class="fa fa-chevron-down"></i></div>
+                                                        <div class="calc__form__item__select-items curr" id="cal_ri_4_2_1">
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr selt" data-nexts="cal_ri_4_4_1" data-fjs="A4">A4</div>
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr" data-nexts="cal_ri_4_4_1" data-fjs="A3">A3</div>
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr" data-nexts="cal_ri_4_4_1" data-fjs="A2">A2</div>
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr" data-nexts="cal_ri_4_4_1" data-fjs="A1">A1</div>
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr" data-nexts="cal_ri_4_4_1" data-fjs="A0">A0</div>
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr" data-nexts="cal_ri_4_4_1" data-fjs="AA">AA</div>
+                                                            <div class="calc__form__item__select-item no-nxt calc_pr" data-nexts="cal_ri_4_4_1" data-fjs="2AA">2AA</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" id="pan-form" value="A4" class="irs-hidden-input" tabindex="-1" readonly="">
+                                                <div class="calc__form__row" id="cal_row_4_3">
+                                                    <div class="calc__form__item calc__form__item-light"> <label class="fb calc__form__item__name">Материал</label>
+                                                        <div class="calc__form__item__select">фремлайт</div>
+                                                        <div class="calc__form__item__icon calc__form__item__icon-right"><i class="fa fa-chevron-down"></i></div>
+                                                        <div class="calc__form__item__select-items curr" id="cal_ri_4_4_1">
+                                                            <div class="calc__form__item__select-item calc_pr selt" data-fjs="фремлайт">Фремлайт</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="акрилайт">Акрилайт</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="кристалайт">Кристалайт</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="par_on_mob"></div><label>Введите ваши данные</label>
+                                                <div class="calc_form calc_cont_form">
+                                                    <div role="form" class="wpcf7" id="wpcf7-f2492-o3" lang="ru-RU" dir="ltr">
+                                                        <div class="screen-reader-response"></div>
+                                                        <form action="https://mrrk.ru/calc/#wpcf7-f2492-o3" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                            <div style="display: none;"> <input type="hidden" name="_wpcf7" value="2492"> <input type="hidden" name="_wpcf7_version" value="5.1.1"> <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2492-o3"> <input type="hidden" name="_wpcf7_container_post" value="0"> <input type="hidden" name="g-recaptcha-response" value="03AGdBq24DfiJrDXiXFbqw6Pgb_FGyNL2AnI8hbfYzv1PuVKbXxTIVAbgtIMEMNTBg04p8E6a1NV2AfJOD502ZxXHGjAQac_cZZm1J0tjN-GU9F5lhitHLycaToBhsbst4OIGBt4jsYR5M65uj7iW7nfuFY57oIsf4fK4SxdlLxl6CdfNB3oUFrDHZ9JzTYi-X78bn2FoJfIqj5dwCrCaBTt7kE_xRrDeqvUuBX7OtR6niO5ZpCaU3YiAtir1r9Z8V_y5rwNi8Ct2fRDXiklJMAf23W-HmUHbntXJZBViZXrw35jsYAfQkxreIrO0MG3HR_T2j1pvkf6mKBBy5-ZnkBhIkUjvwCZBljLqc6_hujShw5g9MboFGHNGyx67G5JNcoiRUSiYuFNDzRGjiTOjlgqtDxj2woWVHQi9h-T4gdSRoLUCXgzmpN1U">
+                                                            </div>
+                                                            <p><label><span class="wpcf7-form-control-wrap user-email"><input type="email" name="user-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true"
+                                                                               aria-invalid="false" placeholder="Введите E-mail"></span> </label></p>
+                                                            <p><label><span class="wpcf7-form-control-wrap user-phone"><input type="tel" name="user-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true"
+                                                                               aria-invalid="false" placeholder="Номер телефона*"></span></label></p>
+                                                            <p><label><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Ваш комментарий"></textarea></span> </label><br>
+                                                                <span class="wpcf7-form-control-wrap textarea-872"><textarea name="textarea-872" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea hide" id="zayavka" aria-invalid="false"></textarea></span>
+                                                            </p>
+                                                            <div hidden=""> <span class="wpcf7-form-control-wrap utm_source"><input type="text" name="utm_source" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_medium"><input type="text" name="utm_medium" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br>                                                                <span class="wpcf7-form-control-wrap utm_campaign"><input
+                                                                           type="text" name="utm_campaign" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_content"><input type="text" name="utm_content" value=""
+                                                                           size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br> <span class="wpcf7-form-control-wrap utm_term"><input type="text" name="utm_term" value="" size="40" class="wpcf7-form-control wpcf7-text"
+                                                                           aria-invalid="false"></span></div>
+                                                            <p><input type="submit" value="Оставить заявку" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__container" id="tab5">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="calc__picture-container col-sm-6"> <img src="./pan-kron.jpg" class="calc__picture-mobile">
+                                                <table class="selted_pars" id="selted_pars3"></table>
+                                                <div class="calc__form__bottom">
+                                                    <div class="row">
+                                                        <div class="calc__form__bottom__left pull-left">
+                                                            <div class="exclamation">Для точного рассчета,<br> оставьте заявку!</div>
+                                                        </div>
+                                                        <div class="calc__form__bottom__right pull-right">
+                                                            <div class="calc__count hide">
+                                                                <div class="calc__count__button calc__count__button-left">-</div> <input type="number" class="calc__count__input" value="1">
+                                                                <div class="calc__count__button calc__count__button-right">+</div>
+                                                            </div>
+                                                            <div class="fb calc__price" id="tot_pr4">
+                                                                <div class="cpric">Итого</div><span>0</span> <i class="fa fa-rub" aria-hidden="true"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="calc__form col-sm-6">
+                                                <div class="calc__form__row">
+                                                    <div class="calc__form__item calc__form__item-height"> <label class="fb calc__form__item__name">Высота <span>см</span></label>
+                                                        <input min="1" type="hidden" class="calc__form__item__input calc__form__item__input-number kor_dimension irs-hidden-input" id="pk_height" value="50" tabindex="-1" readonly="">
+                                                    </div>
+                                                </div><label>Параметры</label>
+                                                <div class="letts_select calc__form__row" id="cal_row_4_1" data-nextid="cal_row_4_2"> <label class="hide">Тип панели</label>
+                                                    <div class="lett_item odn-dvust no-nxt calc_pr selt no-nxt" data-nexts="cal_ri_4_2_1" data-fjs="односторонний"> <svg width="2" height="30" viewBox="0 0 2 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 0V30" stroke="#D3DAE9" stroke-width="2"></path>
+                                                        </svg>Односторонние</div>
+                                                    <div class="lett_item odn-dvust no-nxt calc_pr li_sec no-nxt" data-nexts="cal_ri_4_2_1" data-fjs="двусторонний"> <svg width="12" height="30" viewBox="0 0 12 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1 0V30" stroke="#D3DAE9" stroke-width="2"></path>
+                                                            <path d="M11 7L11 23" stroke="#D3DAE9" stroke-width="2"></path>
+                                                        </svg>Двусторонние</div>
+                                                    <div class="clearfix"></div>
+                                                </div><label>Подсветка</label>
+                                                <div class="letts_select calc__form__row" id="cal_row_5_2" data-nextid="cal_row_5_3"> <label class="hide">Подсветка</label>
+                                                    <div class="lett_item selt" data-nexts="cal_ri_5_3_1" data-fjs="Несветовые"> <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17 6.12933C12.0726 6.12933 8.51327 9.8016 7.94882 13.7461C7.59687 16.3758 8.44687 18.9391 10.2133 20.8782C11.7672 22.5383 12.6172 24.7563 12.6172 27.0407L12.6105 30.6399C12.6105 32.0942 13.8125 33.2696 15.3 33.2696H18.7664C20.2539 33.2696 21.4559 32.0942 21.4559 30.6399L21.4625 27.0407C21.4625 24.6899 22.2394 22.5383 23.7269 21.0176C25.3539 19.3575 26.2039 17.2125 26.2039 14.9946C26.1973 10.0739 22.0203 6.12933 17 6.12933ZM20.1078 30.6399C20.1078 31.3305 19.5434 31.8883 18.8328 31.8883H15.3664C14.6559 31.8883 14.0914 31.3371 14.0914 30.6399V29.0461H20.1012V30.6399H20.1078ZM22.7375 20.0481C20.9711 21.8477 20.048 24.3379 20.048 27.0407V27.6649H14.0383V27.0407C14.0383 24.4774 12.9758 21.9207 11.2094 19.9817C9.65546 18.3215 9.01796 16.1766 9.29687 13.9586C9.79491 10.6383 12.8828 7.51722 17.0066 7.51722C21.323 7.51722 24.7894 10.9106 24.7894 14.9946C24.7894 16.8606 24.0789 18.6602 22.7375 20.0481Z"
+                                                                  fill="#000"></path>
+                                                        </svg> Несветовые</div>
+                                                    <div class="lett_item li_sec" data-nexts="cal_ri_5_3_2" data-fjs="Световые"> <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M17 6.12933C12.0726 6.12933 8.51327 9.8016 7.94882 13.7461C7.59687 16.3758 8.44687 18.9391 10.2133 20.8782C11.7672 22.5383 12.6172 24.7563 12.6172 27.0407L12.6105 30.6399C12.6105 32.0942 13.8125 33.2696 15.3 33.2696H18.7664C20.2539 33.2696 21.4559 32.0942 21.4559 30.6399L21.4625 27.0407C21.4625 24.6899 22.2394 22.5383 23.7269 21.0176C25.3539 19.3575 26.2039 17.2125 26.2039 14.9946C26.1973 10.0739 22.0203 6.12933 17 6.12933ZM20.1078 30.6399C20.1078 31.3305 19.5434 31.8883 18.8328 31.8883H15.3664C14.6559 31.8883 14.0914 31.3371 14.0914 30.6399V29.0461H20.1012V30.6399H20.1078ZM22.7375 20.0481C20.9711 21.8477 20.048 24.3379 20.048 27.0407V27.6649H14.0383V27.0407C14.0383 24.4774 12.9758 21.9207 11.2094 19.9817C9.65546 18.3215 9.01796 16.1766 9.29687 13.9586C9.79491 10.6383 12.8828 7.51722 17.0066 7.51722C21.323 7.51722 24.7894 10.9106 24.7894 14.9946C24.7894 16.8606 24.0789 18.6602 22.7375 20.0481Z"
+                                                                  fill="#000"></path>
+                                                            <path d="M17.7039 0.730469H16.2894V4.05078H17.7039V0.730469Z" fill="#000"></path>
+                                                            <path d="M25.5731 7.13207L26.5626 8.12152L28.9864 5.79066L27.9903 4.80121L25.5731 7.13207Z" fill="#000"></path>
+                                                            <path d="M33.2695 15.6851H29.8031V17.073H33.2695V15.6851Z" fill="#000"></path>
+                                                            <path d="M4.19688 15.6851H0.730469V17.073H4.19688V15.6851Z" fill="#000"></path>
+                                                            <path d="M5.98328 4.79449L4.98718 5.78395L7.41101 8.11481L8.40046 7.12535L5.98328 4.79449Z" fill="#000"></path>
+                                                        </svg> Световые</div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                                <div class="calc__form__row" id="cal_row_5_3" data-nextid="cal_row_5_4">
+                                                    <div class="calc__form__item calc__form__item-light"> <label class="fb calc__form__item__name">Тип панели</label>
+                                                        <div class="calc__form__item__select">Объемный</div>
+                                                        <div class="calc__form__item__icon calc__form__item__icon-right"><i class="fa fa-chevron-down"></i></div>
+                                                        <div class="calc__form__item__select-items curr" id="cal_ri_5_3_1">
+                                                            <div class="calc__form__item__select-item calc_pr selt" data-fjs="объемный">Объемный</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="плоский">Плоский</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="аптечный крест">Аптечный крест</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="фигурный">Фигурный</div>
+                                                        </div>
+                                                        <div class="calc__form__item__select-items" id="cal_ri_5_3_2">
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="объемный">Объемный</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="аптечный крест">Аптечный крест</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="аптечный крест пиксельный">Аптечный крест пиксельный</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="аптечный крест динамический">Аптечный крест динамический</div>
+                                                            <div class="calc__form__item__select-item calc_pr" data-fjs="фигурный">Фигурный</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="par_on_mob"></div><label>Введите ваши данные</label>
+                                                <div class="calc_form calc_cont_form">
+                                                    <div role="form" class="wpcf7" id="wpcf7-f2493-o4" lang="ru-RU" dir="ltr">
+                                                        <div class="screen-reader-response"></div>
+                                                        <form action="https://mrrk.ru/calc/#wpcf7-f2493-o4" method="post" class="wpcf7-form" novalidate="novalidate">
+                                                            <div style="display: none;">
+                                                                <input type="hidden" name="_wpcf7" value="2493">
+                                                                <input type="hidden" name="_wpcf7_version" value="5.1.1">
+                                                                <input type="hidden" name="_wpcf7_locale" value="ru_RU">
+                                                                <input type="hidden" name="_wpcf7_unit_tag" alue="wpcf7-f2493-o4">
+                                                                <input type="hidden" name="_wpcf7_container_post" value="0">
+                                                                <input type="hidden" name="g-recaptcha-response" value="03AGdBq24DfiJrDXiXFbqw6Pgb_FGyNL2AnI8hbfYzv1PuVKbXxTIVAbgtIMEMNTBg04p8E6a1NV2AfJOD502ZxXHGjAQac_cZZm1J0tjN-GU9F5lhitHLycaToBhsbst4OIGBt4jsYR5M65uj7iW7nfuFY57oIsf4fK4SxdlLxl6CdfNB3oUFrDHZ9JzTYi-X78bn2FoJfIqj5dwCrCaBTt7kE_xRrDeqvUuBX7OtR6niO5ZpCaU3YiAtir1r9Z8V_y5rwNi8Ct2fRDXiklJMAf23W-HmUHbntXJZBViZXrw35jsYAfQkxreIrO0MG3HR_T2j1pvkf6mKBBy5-ZnkBhIkUjvwCZBljLqc6_hujShw5g9MboFGHNGyx67G5JNcoiRUSiYuFNDzRGjiTOjlgqtDxj2woWVHQi9h-T4gdSRoLUCXgzmpN1U">
+                                                            </div>
+                                                            <p>
+                                                                <label>
+                                                                    <span class="wpcf7-form-control-wrap user-email">
+                                                                        <input type="email" name="user-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false"
+                                                                               placeholder="Введите E-mail">
+                                                                    </span>
+                                                                </label>
+                                                            </p>
+                                                            <p>
+                                                                <span class="wpcf7-form-control-wrap user-phone">
+                                                                    <input type="tel" name="user-phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Введите телефон*">
+                                                                </span>
+                                                            </p>
+                                                            <p>
+                                                                <label>
+                                                                    <span class="wpcf7-form-control-wrap your-message">
+                                                                        <textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Ваш комментарий"></textarea>
+                                                                    </span>
+                                                                </label>
+                                                                <br>
+                                                                <span class="wpcf7-form-control-wrap textarea-872">
+                                                                    <textarea name="textarea-872" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea hide" id="zayavka" aria-invalid="false"></textarea>
+                                                                </span>
+                                                            </p>
+                                                            <div hidden="">
+                                                                <span class="wpcf7-form-control-wrap utm_source">
+                                                                    <input type="text" name="utm_source" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span>
+                                                                <br>
+                                                                <span class="wpcf7-form-control-wrap utm_medium"><input type="text" name="utm_medium" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false"></span><br>
+                                                                <span class="wpcf7-form-control-wrap utm_campaign">
+                                                                    <input type="text" name="utm_campaign" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false">
+                                                                </span>
+                                                                <br>
+                                                                <span class="wpcf7-form-control-wrap utm_content">
+                                                                    <input type="text" name="utm_content" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false">
+                                                                </span>
+                                                                <br>
+                                                                <span class="wpcf7-form-control-wrap utm_term">
+                                                                    <input type="text" name="utm_term" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false">
+                                                                </span>
+                                                            </div>
+                                                            <p>
+                                                                <input type="submit" value="Оставить заявку" class="wpcf7-form-control wpcf7-submit">
+                                                                <span class="ajax-loader"></span>
+                                                            </p>
+                                                            <div class="clearfix"></div>
+                                                            <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .row -->
+                </div>
+                <!-- end .container -->
+            </main>
+        </div>
+        <script>
+            var anps = {
+                "reset_button": "Reset",
+                "search_placeholder": "Search..."
+            };
+        </script>
+        <script src="./jquery.js"></script>
+        <script src="./script.js"></script>
+</body>
+
+</html>
